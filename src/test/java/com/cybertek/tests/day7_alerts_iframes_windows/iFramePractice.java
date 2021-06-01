@@ -4,6 +4,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -29,12 +30,20 @@ public class iFramePractice {
 
         //#2- LOCATE as a Web Element to swich
         //We find and locate <iframe> web element from the page
-        WebElement iframe = driver.findElement(By.xpath("//iframe[@class='tox-edit-area-iframe']"));
+        //WebElement iframe = driver.findElement(By.xpath("//iframe[@class='tox-edit-area-iframe']"));
+        //driver.switchTo().frame(iframe);
+
+        //#3 If <iframe> tag has id or name attribute,we can pass its attribute value as a string into
+        // .swichTo().frame() method directly
+        driver.switchTo().frame("mce_0_ifr");
 
         //locating web element text
         WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
 
         //#4 Assert: "Your content goes here" text is displayed.
+        Assert.assertTrue(yourContentGoesHereText.isDisplayed());
+
+        //#5-
 
     }
 }

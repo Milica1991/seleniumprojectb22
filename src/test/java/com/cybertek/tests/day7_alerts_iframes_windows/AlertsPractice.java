@@ -5,6 +5,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -22,14 +23,24 @@ public class AlertsPractice {
         driver.get("http://practice.cybertekschool.com/javascript alerts");
     }
     @Test
-    public void information_alert_test(){
+    public void information_alert_test() throws InterruptedException {
         //Locating the button for alert to click
         WebElement informationAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
         //3. Click to "Click for JS Alert" buton
         informationAlertButton.click();
+        Thread.sleep(2000);
         //4. Click to OK button from the alert
         Alert alert = driver.switchTo().alert();
+        alert.accept();
         //5. Verify "You sucessfuly clicked an alert" text is displayed
+        WebElement resultText = driver.findElement(By.xpath("//p[@id='result']"));
+
+        String espectedText = "You successfuly clicked an alert";
+        String actualText = resultText.getText();
+
+        Assert.assertTrue(resultText.isDisplayed(),"Result text is not displayed on the page");
+
+        Assert.assertEquals(actualText, espectedText, "Actual text is nor as expected");
 
 
 

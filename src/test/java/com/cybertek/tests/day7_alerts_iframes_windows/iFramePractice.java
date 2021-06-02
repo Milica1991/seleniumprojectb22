@@ -43,7 +43,15 @@ public class iFramePractice {
         //#4 Assert: "Your content goes here" text is displayed.
         Assert.assertTrue(yourContentGoesHereText.isDisplayed());
 
-        //#5-
+        //driver.switchTo().parentFrame();
+        driver.switchTo().defaultContent();
+
+        //locating hader as web element
+        WebElement headerText = driver.findElement(By.xpath("//h3"));
+
+        //#5-Assert: an ifame containing the TinyMCE WYSIWYG Editor
+        Assert.assertTrue(headerText.isDisplayed());
+
 
     }
 }

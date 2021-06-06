@@ -23,6 +23,21 @@ public class P1_Library_Login {
         driver.get("http://library2.cybertekschool.com/login.html");
 
     }
+    public void loginToLibrary(){
+
+        //3. Enter username: “”
+        WebElement inputUsername = driver.findElement(By.xpath("//input[@id='inputEmail']"));
+        inputUsername.sendKeys("student11@library");
+
+        //4. Enter password: “”
+        WebElement inputPassword = driver.findElement(By.xpath("//input[@id='inputPassword']"));
+        inputPassword.sendKeys("tScBPCUr");
+
+        //5. Click to Login button
+        WebElement loginButton = driver.findElement(By.xpath("//button[text()='Sign in']"));
+        loginButton.click();
+
+    }
 
     @Test
     public void login_link_count_test(){

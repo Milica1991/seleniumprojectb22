@@ -13,4 +13,11 @@ public class Driver {
      * we make static,because we want it to run before everything else,and we will use in a static method
      */
     private static WebDriver driver;
+
+    /**
+     * Creating re-usable method that will return same driver instance everytime we call it.
+     */
+    public static WebDriver getDriver(){
+
+    }
 }

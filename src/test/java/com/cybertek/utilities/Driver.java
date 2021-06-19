@@ -58,7 +58,8 @@ public class Driver {
     }
 
     /**
-     *
+     *This method make sure we have some form of driver sesion or driver id has
+     * Eather null or not null it must exist
      */
     public static void closeDriver(){
         if (driver!=null){

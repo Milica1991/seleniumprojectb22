@@ -1,4 +1,4 @@
-package com.cybertek.tests.day4;
+package com.cybertek.tests.day4_cssSelector_xpath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

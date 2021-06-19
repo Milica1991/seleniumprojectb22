@@ -12,7 +12,7 @@ public class JSExecutorPractices {
     @Test
     public void scroll_using_jsExecutor_test1() {
         //Get the page
-        Driver.getDriver().get("htpp://practice.cybertekschool.com/infinite_scroll");
+        Driver.getDriver().get("http://practice.cybertekschool.com/infinite_scroll");
         BrowserUtils.sleep(2);
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -32,7 +32,7 @@ public class JSExecutorPractices {
 
         @Test
         public void scroll_using_jsExecutor_test2(){
-            Driver.getDriver().get("htpp://practice.cybertekschoo;.com/large");
+            Driver.getDriver().get("http://practice.cybertekschool.com/large");
 
             JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 

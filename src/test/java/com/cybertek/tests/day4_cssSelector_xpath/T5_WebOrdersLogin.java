@@ -1,4 +1,4 @@
-package com.cybertek.tests.day4;
+package com.cybertek.tests.day4_cssSelector_xpath;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

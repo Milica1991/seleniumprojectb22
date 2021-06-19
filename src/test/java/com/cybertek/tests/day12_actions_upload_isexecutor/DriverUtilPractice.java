@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static com.cybertek.utilities.Driver.getDriver;
+
 public class DriverUtilPractice {
 
     @Test
@@ -15,22 +17,23 @@ public class DriverUtilPractice {
         //1- go to google.com
         //Driver.getDriver() -> create driver instance and ready to use
         Driver.getDriver().get(ConfigurationReader.getProperty("googleUrl"));
+
         //2- Search for a value
-        WebElement searchBox = Driver.getDriver().findElement(By.name("q"));
+        WebElement searchBox = getDriver().findElement(By.name("q"));
 
         String searchValue = ConfigurationReader.getProperty("searchValue");
 
         searchBox.sendKeys(searchValue + Keys.ENTER);
 
         //3- Verify value is contained in the title
-        String actualTitle=Driver.getDriver().getTitle();
+        String actualTitle= getDriver().getTitle();
         String expectedInTitle = searchValue;
 
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
 
-        Driver.getDriver().quit();
+        getDriver().quit();
 
-        Driver.getDriver().get("https://etsv.com");
+        getDriver().get("https://etsv.com");
 
         Driver.closeDriver();
 

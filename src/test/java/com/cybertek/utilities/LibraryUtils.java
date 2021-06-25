@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 
 public class LibraryUtils {
     public static void loginToLibrary(WebDriver driver){
-        //3. Enter username: “”
         WebElement inputUsername = driver.findElement(By.xpath("//input[@id='inputEmail']"));
         inputUsername.sendKeys("student11@library");
 
@@ -17,7 +16,6 @@ public class LibraryUtils {
         //5. Click to Login button
         WebElement loginButton = driver.findElement(By.xpath("//button[text()='Sign in']"));
         loginButton.click();
-
     }
 
 }

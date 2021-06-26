@@ -16,6 +16,7 @@ public class ConfigurationReader {
             properties.load(file);
 
             //close the file
+            file.close();
 
 
         } catch (IOException e) {
@@ -24,9 +25,7 @@ public class ConfigurationReader {
     }
     //use the above creted login to create a re-usable static method
     public static String getProperty(String keyWord){
-        return properties.getProperty("keyWord");
+        return properties.getProperty(keyWord);
     }
-
-
 
 }

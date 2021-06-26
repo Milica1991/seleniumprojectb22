@@ -6,9 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PageObjectModelPractices {
-
     @Test
-    public void negative_login_to_library_test() {
+    public void negative_login_to_library_test(){
 
         //1- Go to library
         Driver.getDriver().get("https://library2.cybertekschool.com/login.html");
@@ -30,5 +29,9 @@ public class PageObjectModelPractices {
 
         //5- Verify error message is displayed
         Assert.assertTrue(loginPage.incorrectEmailOrPasswordError.isDisplayed());
+
+
     }
+
 }
+

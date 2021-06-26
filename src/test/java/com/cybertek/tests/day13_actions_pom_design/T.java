@@ -38,7 +38,7 @@ public class T {
 
            Thread.sleep(2000);
            //click on reset
-           driver.findElement(By.xpath("(//i[@class='fa-reset'])[2]")).click();
+          driver.findElement(By.xpath("(//i[@class='fa-reset'])[2]")).click();
 
 
 

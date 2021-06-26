@@ -14,6 +14,7 @@ public class LibraryLoginPage {
     public WebElement inputEmail;
     @FindBy(id = "inputPassword")
     public WebElement inputPassword;
+
     @FindBy(xpath = "//button[text()='Sign in']")
     public WebElement signInButton;
 
